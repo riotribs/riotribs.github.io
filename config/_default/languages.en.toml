@@ -1,0 +1,7 @@
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  favicon = true
+  # keywords = ["Riot Ribs", "Lorenzo Patrick", "Portland", "Protest", "Riot", "Ribs", "Food", "Mutual Aid", "Community", "Solidarity", "Direct Action", "Black Lives Matter"]

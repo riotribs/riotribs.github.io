@@ -1,0 +1,78 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://blowfish.page/docs/getting-started/
+
+theme = "gallery"
+baseURL = "https://riotribs.org/"
+defaultContentLanguage = "en"
+timeout = 120000
+
+
+enableRobotsTXT = true
+
+buildDrafts = false
+buildFuture = false
+
+languageCode = "en"
+languageName = "English"
+title = "riotribs.org"
+timeZone = "America/Los_Angeles"
+
+#googleAnalytics = "G-Z81P1YK5JV"
+
+[params]
+  defaultTheme = "dark"
+  description = "The OG Riot Ribs site"
+  title = "Riot Ribs"
+  [params.author]
+    email = "phillip.sitbon@gmail.com"
+    name = "Phillip Sitbon"
+  [params.socialIcons]
+    facebook = "https://www.facebook.com/riotribs"
+    github = "https://github.com/riotribs/riotribs.github.io/"
+#    youtube = "https://www.youtube.com/"
+#    email = "mailto:user@example.com"
+    #website = "https://example.com"
+    #mastodon = "https://example.com"
+    #pixelfed = "https://example.com"
+
+
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [module.hugoVersion]
+    min = "0.123.7"
+    extended = true
+  [[module.imports]]
+    path = "gallery"
+
+[services]
+  [services.rss]
+    limit = 100
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown: https://www.kiroule.com/article/use-video-embeds-in-hugo-theme/
+
+[privacy]
+    [privacy.youtube]
+        privacyEnhanced = true
