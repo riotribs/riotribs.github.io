@@ -1,0 +1,6 @@
+.*
+!.gitignore
+!.gitkeep
+!.github/
+
+resources/_gen/
